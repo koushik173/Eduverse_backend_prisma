@@ -1,0 +1,13 @@
+npm init -y
+npm i express bcryptjs validator jsonwebtoken cookie-parser
+npm i -D nodemon
+npm i -D prisma
+
+setUp mongodb then setUp the line on .env
+
+npm install @prisma/client
+
+npx prisma generate
+prisma/=> create index.js and put prisma generate files
+
+done prisma setup........
