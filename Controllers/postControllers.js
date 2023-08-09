@@ -1,6 +1,6 @@
 const prisma = require('../prisma/index')
 
-// create a new post 
+// create a new post  
 
 exports.createPost = async(req,res, next)=>{
     try {
