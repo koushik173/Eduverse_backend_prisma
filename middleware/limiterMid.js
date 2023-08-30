@@ -15,5 +15,3 @@ exports.routeLimiter = rateLimit({
   message: 'Too many requests. Please try again later.',
   keyGenerator: (req) => req.originalUrl, // Generate rate limit key based on the request URL
 });
-
-

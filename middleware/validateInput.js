@@ -1,6 +1,5 @@
 const Joi = require('joi');
 
-// SignUp validation middleware
 exports.validateSignUp = (req, res, next) => {
     const schema = Joi.object({
         name: Joi.string().pattern(/^[A-Z][A-Za-z .]{3,20}$/).required(),
@@ -10,7 +9,7 @@ exports.validateSignUp = (req, res, next) => {
         cfpassword: Joi.string().valid(Joi.ref('password')).required(),
         occupation: Joi.string().required(),
     });
-    // console.log(req.body);
+
     const { name, email, password, phone, occupation } = req.body
 
     if (!name || !email || !password ||!phone ||!occupation) {
@@ -29,8 +28,6 @@ exports.validateSignUp = (req, res, next) => {
     }
     
 };
-
-// login validation middleware
 exports.validateLogin = (req, res, next) => {
     const schema = Joi.object({
         email: Joi.string().pattern(/^(cse|eee|law)_\d{10}@lus\.ac\.bd$/).required(),

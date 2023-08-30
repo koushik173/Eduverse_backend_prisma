@@ -24,6 +24,7 @@
     "validator": "^13.9.0"
   },
   "devDependencies": {
+    "autocannon": "^7.12.0",
     "nodemon": "^2.0.22",
     "prisma": "^5.1.1"
   }
